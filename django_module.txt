@@ -1,0 +1,29 @@
+class Emp(models.Model):
+    emono=models.IntegerField()
+    name=models.CharField(max_length=40)
+    email=models.EmailField(unique=True,max_length=40)
+    password=models.CharField(max_length=20,default='demo@123')
+    dept_name=[
+        ('HR','hr'),
+        ('SALES','sales'),
+        ('QUALITY','quality'),
+        ('IT','it'),
+        ('KYC','kyc'),
+        ('ADMIN','admin')
+    ]
+    #dept_name ke alphabatically kaise print krenge 
+    dept=models.CharField(choices=dept_name)
+    dob=models.DateField(auto_now=False)
+    doj=models.DateField(auto_created=True)
+    address=models.TextField(max_length=50)
+    mobile=models.IntegerField()
+    emp_st=[
+        ('0','Activated'),
+        ('1','Deactivate')
+    ]
+    is_emp_active=models.CharField(choices=emp_st)
+    image=models.ImageField(upload_to='pics')
+    
+    
+
+# Create your models here.

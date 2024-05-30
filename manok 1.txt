@@ -1,0 +1,90 @@
+<html>
+<head><title>Input Form</title></head>
+<body>
+<h1><center>Array</center></h1>
+<center><form id="form" name="form" method="post"  action=" " >
+<input type="submit" id="sub" name="sub" value"show" />
+</form>
+</body>
+</html>
+<?php
+echo "Program number 1<br />";
+$x= array(10.5,15,52, 'rahul' , 'amit' ) ;
+echo $x[0] . "<br />" ;
+echo $x[1] . "<br />" ;
+echo $x[2] . "<br />" ;
+echo $x[3] . "<br />" ;
+echo $x[4] . "<br />" ;
+?>
+<?php
+echo "Program number 2<br />";
+$x= array(10.5,15,52, 'rahul' , 'amit' ) ;
+echo "<br />";
+for($i=0;$i<5;$i++)
+{
+echo $x[$i] . "<br />" ;
+}
+?>
+<?php
+echo "Program number 3<br />";
+$x= array(52,5,10 ) ;
+$data = sort($x) ;
+echo "<br />" ; echo "<br />";
+print_r($x) ;
+ echo "<br />";
+$y= array(20,35,22);
+$z= array() ;
+echo count($x) ;
+echo "<br />" ;
+for($i=0;$i<count($x);$i++)
+{
+echo "sum of array :" .$z[$i]=$x[$i]+$y[$i] . "<br />" ;
+}
+?>
+<?php
+echo "Program number 4</br>";
+$x= array(10.5,15,52,20,5) ;
+$y= 20;
+echo "<br />" ;
+echo"<br />" ;
+echo $y;
+echo "<br />" ;
+for($i=0;$i<count($x) ;$i++)
+{
+if($y==$x[$i])
+{
+echo "Item is found at $i position" ;
+break;
+}
+}
+if($i>=count($x))
+{
+echo "Item not found ";
+}
+?>
+<?php
+ echo "<br />Program number 5<br />";
+echo "<br /><br /><br /><br />New program" ;
+$x= array(10,15,52,20.5);
+$item = array_rand($x);
+echo "<br />Item is :" .$x[$item];
+$y= 0;
+echo "<br />";
+echo "<br />";
+for($i=0;$i<count($x) ;$i++)
+{
+for($j=$i+1;$j<count($x);$j++)
+{
+if($x[$i]>$x[$j])
+{
+$y = $x[$i];
+$x[$i]=$x[$j];
+$x[$j] = $y;
+}
+}
+}
+for($i=0;$i<count($x);$i++)
+{
+echo $x[$i] . "<br />";
+}
+?>
